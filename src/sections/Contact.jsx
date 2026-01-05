@@ -13,7 +13,7 @@ function Contact({ data }) {
             <div className="contact-links">
               {data.social.email && (
                 <a href={`mailto:${data.social.email}`} className="contact-link">
-                  📧 {data.social.email}
+                  {data.social.email}
                 </a>
               )}
               {data.social.github && (

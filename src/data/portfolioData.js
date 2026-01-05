@@ -14,7 +14,7 @@ export const portfolioData = {
   social: {
     github: "https://github.com/yukydesu",
     linkedin: "https://linkedin.com/in/kyllian-delbauche-45b489286",
-    email: "kylliandelbauchep@example.com",
+    email: "kylliandelbauchep@gmail.com",
     instagram: "https://instagram.com/kylliandelbauche" // Optionnel
   },
 
@@ -75,59 +75,57 @@ export const portfolioData = {
   // Compétences BUT 3 - Bilan d'apprentissage
   competences: [
     {
-      title: "Réaliser une application",
+      title: "Réaliser - Adapter des applications sur un ensemble de supports",
       apprentissages: [
-        "Développer des applications informatiques simples",
-        "Partir des exigences et aller jusqu'à une application complète",
-        "Utiliser des approches de développement adaptées",
-        "Maîtriser la qualité en développement"
+        "Choisir et implémenter les architectures adaptées",
+        "Faire évoluer une application existante",
+        "Intégrer des solutions dans un environnement de production"
       ],
       composantes: [
-        "Concevoir et développer des applications sécurisées et robustes",
-        "Utiliser des frameworks et bibliothèques modernes",
-        "Optimiser les performances des applications",
-        "Implémenter des tests unitaires et d'intégration"
+        "Respecter les besoins décrits par le client",
+        "Appliquer les principes algorithmiques",
+        "Veiller à la qualité du code et à sa documentation",
+        "Choisir les ressources techniques appropriées"
       ],
-      projets: ["SAÉ 5.01", "Projet personnel", "Stage BUT 3"]
+      projets: ["SAE 5.01", "Pacman", "CAE Projet d'entreprise"]
     },
     {
-      title: "Travailler dans une équipe informatique",
+      title: "Conduire - Participer à la conception et à la mise en œuvre d'un projet SI",
       apprentissages: [
-        "Identifier ses aptitudes pour travailler dans une équipe",
-        "Situer son rôle et ses missions au sein d'une équipe informatique",
-        "Manager une équipe informatique",
-        "Acquérir, développer et exploiter les aptitudes pour travailler en équipe"
+        "Mesurer les impacts économiques, sociétaux et technologiques d'un projet informatique",
+        "Intégrer un projet informatique dans le système d'information d'une organisation",
+        "Adapter un système d'information"
       ],
       composantes: [
-        "Gérer un projet avec une méthodologie agile",
-        "Collaborer efficacement avec Git et les outils de versioning",
-        "Communiquer et documenter son travail",
-        "Participer aux revues de code et code reviews"
+        "Adopter une démarche proactive, créative et critique",
+        "Respecter les règles juridiques et les normes en vigueur",
+        "Communiquer efficacement avec les différents acteurs d'un projet",
+        "Sensibiliser à une gestion éthique, responsable, durable et interculturelle"
       ],
-      projets: ["SAÉ en équipe", "Nuit de l'Info", "Projet collaboratif"]
+      projets: ["CAE Projet d'entreprise", "SAE 5.01"]
     },
     {
-      title: "[Votre compétence de spécialité]",
+      title: "Collaborer - Manager une équipe informatique",
       apprentissages: [
-        "Apprentissage critique 1 de votre parcours",
-        "Apprentissage critique 2 de votre parcours",
-        "Apprentissage critique 3 de votre parcours",
-        "Apprentissage critique 4 de votre parcours"
+        "Organiser et partager une veille technologique et informationnelle",
+        "Identifier les enjeux de l'économie de l'innovation numérique",
+        "Guider la conduite du changement informatique au sein d'une organisation",
+        "Accompagner le management de projet informatique"
       ],
       composantes: [
-        "Composante essentielle 1",
-        "Composante essentielle 2",
-        "Composante essentielle 3",
-        "Composante essentielle 4"
+        "Inscrire sa démarche au sein d'une équipe pluridisciplinaire",
+        "Accompagner la mise en œuvre des évolutions informatiques",
+        "Veiller au respect des contraintes juridiques",
+        "Développer une communication efficace et collaborative"
       ],
-      projets: ["SAÉ spécialité", "Projet BUT 3"]
+      projets: ["CAE Projet d'entreprise", "SAE 5.01"]
     }
   ],
 
   // Projets avec détails complets
   projects: [
     {
-      id: 1,
+      id: 2,
       title: "Pacman",
       description: "Un jeu Pacman développé en C mettant en avant les appels système et la gestion de la mémoire.",
       tags: ["C"],
@@ -176,15 +174,15 @@ export const portfolioData = {
       ]
     },
     {
-      id: 2,
-      title: "Projet SAÉ 5.01",
-      description: "Description de votre projet SAÉ. Expliquez le contexte académique et les objectifs.",
+      id: 1,
+      title: "Projet SAE 5.01",
+      description: "Description de votre projet SAE. Expliquez le contexte académique et les objectifs.",
       tags: ["React", "API", "CSS", "Node.js"],
       github: "https://github.com/votre-username/sae-501",
       demo: null,
       image: null,
 
-      type: "Projet académique (SAÉ)",
+      type: "Projet académique (SAE)",
       duration: "6 semaines",
       team: "Équipe de 4 étudiants",
       context: "Projet réalisé dans le cadre du BUT 3. Objectif : développer une application web complète avec backend et frontend.",
