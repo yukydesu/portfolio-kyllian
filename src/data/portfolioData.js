@@ -8,14 +8,14 @@ export const portfolioData = {
   bio: "Passionné par le développement web moderne, je crée des applications performantes et élégantes avec React et les technologies modernes.",
 
   // URL du CV (placez votre CV dans le dossier public/)
-  cvUrl: "/cv.pdf",
+  cvUrl: "/portfolio-kyllian/DELBAUCHE_CV.pdf",
 
   // Liens sociaux
   social: {
-    github: "https://github.com/votre-username",
-    linkedin: "https://linkedin.com/in/votre-profil",
-    email: "votre.email@example.com",
-    twitter: "https://twitter.com/votre-username" // Optionnel
+    github: "https://github.com/yukydesu",
+    linkedin: "https://linkedin.com/in/kyllian-delbauche-45b489286",
+    email: "kylliandelbauchep@example.com",
+    instagram: "https://instagram.com/kylliandelbauche" // Optionnel
   },
 
   // Section À propos
