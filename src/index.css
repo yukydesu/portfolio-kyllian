@@ -1,0 +1,10 @@
+/* CSS minimal pour index.css - Les styles principaux sont dans App.css */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
