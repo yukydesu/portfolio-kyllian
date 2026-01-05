@@ -168,7 +168,38 @@ body {
 
 .hero-content {
   max-width: 800px;
+  position: relative;
   text-align: center;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-image {
+  position: absolute;
+  right: -250px;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 280px;
+  animation: wave 2s ease-in-out infinite;
+  z-index: 0;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(calc(-50% - 5px));
+  }
 }
 
 .hero-title {
@@ -257,6 +288,23 @@ body {
 }
 
 @media (max-width: 768px) {
+  .hero-image {
+    position: static;
+    transform: none;
+    max-width: 200px;
+    margin: 0 auto 2rem;
+    animation: wave-mobile 2s ease-in-out infinite;
+  }
+
+  @keyframes wave-mobile {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
   .hero-title {
     font-size: 2rem;
   }
