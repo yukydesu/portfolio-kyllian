@@ -3,8 +3,7 @@ function Contact({ data }) {
     <section id="contact" className="section section-dark">
       <div className="container">
         <h2 className="section-title">Contact</h2>
-        <p className="section-subtitle">N'hésitez pas à me contacter !</p>
-
+        
         <div className="contact-content">
           <div className="contact-info">
             <p>Vous avez un projet en tête ou vous voulez simplement discuter ?</p>

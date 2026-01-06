@@ -126,140 +126,272 @@ export const portfolioData = {
   projects: [
     {
       id: 2,
-      title: "Pacman",
-      description: "Un jeu Pacman développé en C mettant en avant les appels système et la gestion de la mémoire.",
-      tags: ["C"],
-      github: "https://github.com/votre-username/portfolio",
-      demo: "https://votre-portfolio.com",
-      image: null,
-
-      // Détails du projet
-      type: "Projet personnel",
-      duration: "2 semaines",
-      team: "Individuel",
-      context: "Création d'un portfolio personnel pour valoriser mes compétences et projets réalisés durant mon BUT Informatique.",
-      constraints: "Respecter les bonnes pratiques React, créer un design moderne et responsive, optimiser les performances.",
-      methodology: "Développement itératif avec focus sur l'UX/UI. Utilisation de Vite pour un développement rapide et d'un design system cohérent.",
-      results: [
-        "Site web responsive et performant",
-        "Temps de chargement < 2 secondes",
-        "Interface intuitive et moderne",
-        "Code structuré et maintenable"
-      ],
-      technologies: ["React", "Vite", "CSS3", "JavaScript ES6+"],
-      skillsWorked: [
-        {
-          category: "Développement Frontend",
-          details: [
-            "Composants React réutilisables",
-            "Gestion du state avec hooks",
-            "CSS moderne avec variables CSS",
-            "Responsive design mobile-first"
-          ]
-        },
-        {
-          category: "Bonnes pratiques",
-          details: [
-            "Architecture de projet claire",
-            "Code lisible et documenté",
-            "Optimisation des performances",
-            "Accessibilité web (WCAG)"
-          ]
-        }
-      ],
-      visuals: [
-        // Ajoutez vos captures d'écran/vidéos plus tard
-        // { type: "image", url: "/projects/portfolio-1.png", caption: "Page d'accueil" },
-        // { type: "image", url: "/projects/portfolio-2.png", caption: "Section projets" }
-      ]
-    },
-    {
-      id: 1,
-      title: "Projet SAE 5.01",
-      description: "Description de votre projet SAE. Expliquez le contexte académique et les objectifs.",
-      tags: ["React", "API", "CSS", "Node.js"],
-      github: "https://github.com/votre-username/sae-501",
+      title: "Pas Cman - Jeu Pacman client-serveur",
+      description: "Jeu Pacman multijoueur développé en C avec architecture client-serveur, mémoire partagée et sockets. Projet réalisé dans le cadre du cours de Langage C et Appels Système.",
+      tags: ["C", "Sockets", "IPC", "Appels système"],
+      github: "https://github.com/yukydesu/PasCman",
       demo: null,
       image: null,
 
-      type: "Projet académique (SAE)",
-      duration: "6 semaines",
-      team: "Équipe de 4 étudiants",
-      context: "Projet réalisé dans le cadre du BUT 3. Objectif : développer une application web complète avec backend et frontend.",
-      constraints: "Délais serrés, travail en équipe, méthodologie Agile imposée, technologies spécifiques à utiliser.",
-      methodology: "Méthode Agile Scrum avec sprints de 2 semaines. Daily meetings, rétrospectives et démonstrations régulières.",
+      // Détails du projet
+      type: "Projet académique",
+      duration: "6 semaines (Octobre - Novembre 2024)",
+      team: "Équipe de 4 étudiants (Groupe 7)",
+      context: "Projet réalisé en 2ème année de Bachelier Informatique à la Haute École Léonard de Vinci dans le cadre du cours BINV2181 - Langage C et Appels Système (S4). Objectif : créer un jeu Pacman multijoueur avec architecture client-serveur utilisant les concepts avancés de programmation système.",
+      constraints: "Utilisation obligatoire du langage C, gestion de la communication inter-processus (IPC), synchronisation avec sémaphores, architecture client-serveur avec sockets, gestion de plusieurs clients simultanés.",
+      methodology: "Architecture basée sur un serveur central (pas_server) gérant la mémoire partagée et les sémaphores. Utilisation de fork/exec pour la gestion des processus, communication via sockets TCP/IP, et envoi périodique des mises à jour via alarm(). Développement collaboratif en équipe de 4.",
       results: [
-        "Application fonctionnelle livrée dans les délais",
-        "API REST documentée avec Swagger",
-        "Interface utilisateur intuitive",
-        "Tests unitaires et d'intégration"
+        "Serveur multi-client fonctionnel avec gestion de la mémoire partagée",
+        "Interface graphique réactive avec mise à jour en temps réel",
+        "Synchronisation correcte des accès concurrents via sémaphores",
+        "Architecture client-serveur robuste documentée (diagrammes d'architecture et de séquence)",
+        "Gestion efficace de la communication par sockets et pipes"
       ],
-      technologies: ["React", "Node.js", "Express", "MongoDB", "Jest"],
+      technologies: ["C", "Sockets TCP/IP", "Mémoire partagée", "Sémaphores", "Fork/Exec", "Appels système POSIX", "IPC (Inter-Process Communication)"],
       skillsWorked: [
         {
-          category: "Développement Full Stack",
+          category: "Programmation système",
           details: [
-            "Création d'une API REST avec Node.js/Express",
-            "Intégration frontend/backend",
-            "Gestion de base de données MongoDB",
-            "Authentification et sécurité"
+            "Gestion de la mémoire partagée (shm_open, mmap)",
+            "Synchronisation avec sémaphores (sem_wait, sem_post)",
+            "Utilisation des appels système (fork, exec, alarm)",
+            "Communication par sockets TCP/IP (socket, bind, listen, accept)",
+            "Communication inter-processus via pipes (dup2)"
+          ]
+        },
+        {
+          category: "Architecture logicielle",
+          details: [
+            "Conception d'une architecture client-serveur",
+            "Gestion de multiples clients simultanés (client_handler)",
+            "Séparation des responsabilités (serveur, client, interface graphique)",
+            "Documentation technique (diagrammes UML)"
           ]
         },
         {
           category: "Travail en équipe",
           details: [
-            "Méthodologie Agile/Scrum",
-            "Utilisation de Git en équipe",
-            "Code reviews et pair programming",
-            "Communication et documentation"
+            "Collaboration en équipe de 4 étudiants",
+            "Répartition des tâches et développement modulaire",
+            "Gestion de version avec Git",
+            "Rédaction de documentation technique commune"
           ]
         }
       ],
-      visuals: []
+      visuals: [
+        // TODO: Ajouter des captures d'écran du jeu et des diagrammes
+        // { type: "image", url: "/portfolio-kyllian/projects/pacman-architecture.png", caption: "Diagramme d'architecture du système client-serveur" },
+        // { type: "image", url: "/portfolio-kyllian/projects/pacman-sequence.png", caption: "Diagramme de séquence d'une partie" },
+        // { type: "image", url: "/portfolio-kyllian/projects/pacman-gameplay.png", caption: "Interface graphique du jeu en action" },
+        // { type: "gif", url: "/portfolio-kyllian/projects/pacman-demo.gif", caption: "Démonstration du gameplay multijoueur" }
+      ]
     },
     {
-      id: 3,
-      title: "CAE Projet d'entreprise",
-      description: "Projet de groupe",
-      tags: ["JavaScript", "React", "Git"],
+      id: 1,
+      title: "SAE 5.D.01 - Simulation de Gestion d'Entreprise 3D",
+      description: "Jeu de simulation économique multijoueur combinant une API REST Symfony, une interface Vue.js et un monde Minecraft (Luanti). Les joueurs gèrent des entreprises virtuelles : achat de zones, construction d'usines, production de ressources et commerce sur une marketplace.",
+      tags: ["Symfony", "Vue.js", "PHP", "Docker", "MySQL", "API Platform", "Tailwind"],
       github: null,
       demo: null,
       image: null,
 
-      type: "CAE Projet d'entreprise",
-      duration: "10 semaines",
-      team: "Équipe de développement (5 personnes)",
-      context: "Stage réalisé chez [Nom de l'entreprise] dans le cadre du BUT 3. Mission : participer au développement de [projet].",
-      constraints: "Environnement professionnel, respect des standards de l'entreprise, travail sur un projet en production.",
-      methodology: "Intégration dans une équipe de développement existante. Participation aux daily meetings, code reviews et sprints.",
+      type: "Projet académique - SAE",
+      duration: "12 semaines (Septembre - Décembre 2024)",
+      team: "Équipe de 7 étudiants",
+      context: "Projet réalisé en 3ème année Erasmus à l'IUT de Montpellier (S5). Objectif : développer une simulation de gestion d'entreprise intégrant un monde 3D Minecraft, une API REST complète et une interface web moderne. Les joueurs incarnent des chefs d'entreprise et doivent gérer zones, bâtiments, production et commerce.",
+      constraints: "Architecture microservices avec Docker, backend Symfony obligatoire, base de données relationnelle complexe (11 tables), authentification JWT stateless, intégration d'un moteur de jeu 3D (Luanti/Minetest), documentation technique exhaustive requise.",
+      methodology: "Architecture microservices avec 4 services Docker (Frontend Vue.js, Backend Symfony, MySQL, PHPMyAdmin). Modélisation de 16 entités Doctrine avec relations complexes et héritage JOINED. Développement API-first avec API Platform. Documentation de toutes les décisions architecturales (80,000+ lignes de documentation).",
       results: [
-        "Fonctionnalités développées et mises en production",
-        "Intégration réussie dans l'équipe",
-        "Acquisition de compétences professionnelles",
-        "Rapport de stage rédigé"
+        "API REST complète avec 16 entités et 13 repositories",
+        "Base de données relationnelle avec 11 tables et 3 migrations",
+        "Authentification JWT fonctionnelle avec refresh tokens",
+        "Interface Vue.js avec 10 composants et design Minecraft",
+        "Infrastructure Docker Compose avec 4 services orchestrés",
+        "Documentation technique exhaustive (7 fichiers, 80,000+ lignes)",
+        "Système de gestion d'entreprises, bâtiments, employés et inventaire"
       ],
-      technologies: ["À compléter selon votre stage"],
+      technologies: [
+        "Symfony 7.3",
+        "PHP 8.2",
+        "API Platform 4.2",
+        "Doctrine ORM",
+        "Vue.js 3",
+        "Vite",
+        "Tailwind CSS",
+        "MySQL 8.0",
+        "Docker",
+        "Lexik JWT",
+        "Axios",
+        "Luanti (Minetest)"
+      ],
       skillsWorked: [
         {
-          category: "Compétences professionnelles",
+          category: "Backend & Architecture",
           details: [
-            "Travail en environnement professionnel",
-            "Communication avec le client/PO",
-            "Respect des délais et livrables",
-            "Collaboration en équipe de développement"
+            "Conception d'une API REST avec Symfony 7 et API Platform",
+            "Modélisation de base de données complexe (11 tables avec héritage JOINED)",
+            "Authentification stateless avec JWT et refresh tokens",
+            "State Processors pour logique métier personnalisée",
+            "Doctrine ORM avec relations complexes (OneToMany, ManyToOne)",
+            "Migrations versionnées et gestion de schéma"
           ]
         },
         {
-          category: "Compétences techniques",
+          category: "Frontend moderne",
           details: [
-            "À compléter selon votre stage",
-            "Technologies utilisées en entreprise",
-            "Bonnes pratiques professionnelles",
-            "Outils de l'entreprise"
+            "Développement avec Vue.js 3 Composition API",
+            "Routing avec Vue Router et guards d'authentification",
+            "Design responsive avec Tailwind CSS",
+            "Intégration API avec Axios et gestion d'états",
+            "Validation formulaires côté client",
+            "Thématisation Minecraft cohérente"
+          ]
+        },
+        {
+          category: "DevOps & Infrastructure",
+          details: [
+            "Orchestration de 4 services avec Docker Compose",
+            "Configuration multi-environnements (dev/staging/prod)",
+            "Health checks et dépendances entre services",
+            "Volumes persistants pour données",
+            "Génération de certificats SSL auto-signés",
+            "Configuration Nginx et reverse proxy"
+          ]
+        },
+        {
+          category: "Modélisation & Conception",
+          details: [
+            "Modélisation UML et diagrammes d'architecture",
+            "Design patterns (Repository, Inheritance, State Processor)",
+            "Système économique de jeu (production, commerce, marketplace)",
+            "Gestion de complexité (16 entités interconnectées)",
+            "Documentation de décisions architecturales",
+            "Conception API RESTful avec OpenAPI/Swagger"
+          ]
+        },
+        {
+          category: "Travail collaboratif",
+          details: [
+            "Équipe de 7 développeurs",
+            "Décisions architecturales collégiales",
+            "Documentation technique pour partage de connaissances",
+            "Gestion de version avec Git",
+            "Répartition des tâches et coordination"
           ]
         }
       ],
-      visuals: []
+      visuals: [
+        // TODO: Ajouter des captures d'écran de l'application et diagrammes
+        // { type: "image", url: "/portfolio-kyllian/projects/sae-architecture.png", caption: "Diagramme d'architecture microservices (4 services Docker)" },
+        // { type: "image", url: "/portfolio-kyllian/projects/sae-database.png", caption: "Schéma relationnel de la base de données (11 tables)" },
+        // { type: "image", url: "/portfolio-kyllian/projects/sae-dashboard.png", caption: "Tableau de bord Vue.js avec design Minecraft" },
+        // { type: "image", url: "/portfolio-kyllian/projects/sae-companies.png", caption: "Interface de gestion des entreprises" },
+        // { type: "image", url: "/portfolio-kyllian/projects/sae-swagger.png", caption: "Documentation API Swagger auto-générée" },
+        // { type: "gif", url: "/portfolio-kyllian/projects/sae-demo.gif", caption: "Démonstration du système de création d'entreprise" }
+      ]
+    },
+    {
+      id: 3,
+      title: "TerraBio - Plateforme de vente de produits locaux",
+      description: "Application web full-stack de centralisation et vente de produits locaux pour une coopérative, avec gestion des producteurs, clients et réservations. Projet développé dans le cadre du cours Conception d'Applications en Entreprise.",
+      tags: ["React", "TypeScript", "Spring Boot", "PostgreSQL", "Docker", "Azure"],
+      github: "https://gitlab.com/e-vinci/cae-projects/2025-cae-projects/cae-group-07",
+      demo: "https://terrabio-gxd4fhhnezexdzd4.centralus-01.azurewebsites.net",
+      image: null,
+
+      type: "Projet académique - CAE",
+      duration: "12 semaines (Septembre - Décembre 2024)",
+      team: "Équipe de 5 étudiants (Group 07)",
+      context: "Projet réalisé en 3ème année Erasmus à l'IUT de Montpellier dans le cadre du cours Conception d'Applications en Entreprise (S5). Objectif : développer une plateforme web complète permettant à une coopérative de centraliser la vente de produits locaux avec gestion multi-utilisateurs (clients, producteurs, gestionnaires).",
+      constraints: "Architecture microservices obligatoire, déploiement cloud sur Azure, pipeline CI/CD automatisé, respect des bonnes pratiques DevOps, qualité de code (ESLint, tests), documentation technique complète.",
+      methodology: "Méthodologie Agile avec sprints de 2 semaines. Architecture microservices avec Docker et Docker Compose. Pipeline CI/CD GitLab avec tests automatisés, build d'images Docker et déploiement automatique sur Azure Web App. Utilisation de Git (feature branches, merge requests, code reviews).",
+      results: [
+        "Application full-stack déployée en production sur Azure",
+        "API REST complète avec authentification Spring Session + JWT",
+        "Interface utilisateur responsive avec Material-UI et TypeScript",
+        "Pipeline CI/CD automatisé (tests, build, déploiement)",
+        "Architecture microservices containerisée (Docker + Nginx)",
+        "Stockage d'images sur Azure Blob Storage",
+        "Documentation technique complète et cahier des charges"
+      ],
+      technologies: [
+        "React 18",
+        "TypeScript",
+        "Material-UI (MUI)",
+        "Spring Boot 3",
+        "Java 21",
+        "PostgreSQL",
+        "Docker",
+        "Azure Web App",
+        "GitLab CI/CD",
+        "Nginx",
+        "Spring Data JPA",
+        "Maven",
+        "Vite"
+      ],
+      skillsWorked: [
+        {
+          category: "Développement Full Stack",
+          details: [
+            "Conception et développement d'une API REST avec Spring Boot",
+            "Frontend moderne avec React 18 et TypeScript",
+            "Authentification sécurisée (Spring Session + JWT + Refresh Tokens)",
+            "Gestion de base de données PostgreSQL avec Spring Data JPA",
+            "Interface utilisateur avec Material-UI et design responsive",
+            "Communication API avec Axios et gestion des états"
+          ]
+        },
+        {
+          category: "DevOps et Cloud",
+          details: [
+            "Containerisation complète avec Docker et Docker Compose",
+            "Pipeline CI/CD GitLab (test, build, deploy)",
+            "Déploiement automatisé sur Azure Web App",
+            "Configuration multi-environnements (dev/staging/prod)",
+            "Gestion des secrets et variables d'environnement Azure",
+            "Intégration Azure Blob Storage pour stockage de fichiers",
+            "Health checks et monitoring de l'application"
+          ]
+        },
+        {
+          category: "Architecture et conception",
+          details: [
+            "Architecture microservices (API, Frontend, DB, Reverse Proxy)",
+            "Modélisation de base de données relationnelle",
+            "Conception d'API RESTful avec endpoints sécurisés",
+            "Séparation des responsabilités (3-tier architecture)",
+            "Documentation technique et diagrammes UML"
+          ]
+        },
+        {
+          category: "Qualité et bonnes pratiques",
+          details: [
+            "Tests unitaires (JUnit, Vitest) et E2E (Playwright)",
+            "Linting et formatting (ESLint, Prettier)",
+            "Git hooks avec Husky (pre-commit, commit-msg)",
+            "Conventional Commits et code reviews",
+            "Coverage de tests et quality gates"
+          ]
+        },
+        {
+          category: "Gestion de projet",
+          details: [
+            "Analyse de cahier des charges client",
+            "Méthodologie Agile avec sprints",
+            "Travail collaboratif en équipe de 5",
+            "Utilisation de GitLab (branches, MR, issues)",
+            "Documentation technique et livrables"
+          ]
+        }
+      ],
+      visuals: [
+        // TODO: Ajouter des captures d'écran de l'application
+        // { type: "image", url: "/portfolio-kyllian/projects/terrabio-home.png", caption: "Page d'accueil avec carrousel des produits" },
+        // { type: "image", url: "/portfolio-kyllian/projects/terrabio-products.png", caption: "Catalogue de produits avec filtres et recherche" },
+        // { type: "image", url: "/portfolio-kyllian/projects/terrabio-dashboard.png", caption: "Tableau de bord gestionnaire avec statistiques" },
+        // { type: "image", url: "/portfolio-kyllian/projects/terrabio-architecture.png", caption: "Diagramme d'architecture microservices" },
+        // { type: "gif", url: "/portfolio-kyllian/projects/terrabio-demo.gif", caption: "Démonstration du parcours utilisateur complet" }
+      ]
     }
   ]
 }
