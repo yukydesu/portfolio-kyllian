@@ -1,20 +1,39 @@
 import { useState } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 function Header({ toggleTheme, isDark }) {
   const [menuOpen, setMenuOpen] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
 
   const scrollToSection = (id) => {
-    const element = document.getElementById(id)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-      setMenuOpen(false)
+    setMenuOpen(false)
+
+    // Si on est sur la page principale
+    if (location.pathname === '/') {
+      const element = document.getElementById(id)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    } else {
+      // Si on est sur une autre page, naviguer vers la page principale avec l'ancre
+      navigate('/')
+      // Attendre que la navigation soit terminée puis scroller
+      setTimeout(() => {
+        const element = document.getElementById(id)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 100)
     }
   }
 
   return (
     <header className="header">
       <div className="header-container">
-        <h2 className="logo">KD</h2>
+        <button onClick={() => scrollToSection('hero')} className="logo" style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
+          KD
+        </button>
 
         <nav className={`nav ${menuOpen ? 'nav-open' : ''}`}>
           <button onClick={() => scrollToSection('hero')} className="nav-link">

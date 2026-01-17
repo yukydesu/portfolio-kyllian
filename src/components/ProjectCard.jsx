@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom'
+
 function ProjectCard({ project }) {
   return (
-    <div className="project-card">
+    <Link to={`/project/${project.id}`} className="project-card">
       {project.image && (
         <div className="project-image">
           <img src={project.image} alt={project.title} />
@@ -16,21 +18,8 @@ function ProjectCard({ project }) {
             <span key={index} className="tag">{tag}</span>
           ))}
         </div>
-
-        <div className="project-links">
-          {project.github && (
-            <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
-              GitHub
-            </a>
-          )}
-          {project.demo && (
-            <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-link project-link-demo">
-              Démo
-            </a>
-          )}
-        </div>
       </div>
-    </div>
+    </Link>
   )
 }
 

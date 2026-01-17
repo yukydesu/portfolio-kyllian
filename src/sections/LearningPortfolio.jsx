@@ -1,4 +1,19 @@
+import { Link } from 'react-router-dom'
+
+// Mapping des noms de projets vers leurs IDs
+const projectNameToId = {
+  'SAE 5.01': 1,
+  'SAE 5.D.01': 1,
+  'Pacman': 2,
+  'CAE Projet d\'entreprise': 3,
+  'TerraBio': 3
+}
+
 function LearningPortfolio({ data }) {
+  const getProjectId = (projectName) => {
+    return projectNameToId[projectName] || null
+  }
+
   return (
     <section id="learning-portfolio" className="section">
       <div className="container">
@@ -32,9 +47,20 @@ function LearningPortfolio({ data }) {
                   <>
                     <h4>Projets associés :</h4>
                     <div className="projets-tags">
-                      {competence.projets.map((projet, idx) => (
-                        <span key={idx} className="projet-tag">{projet}</span>
-                      ))}
+                      {competence.projets.map((projet, idx) => {
+                        const projectId = getProjectId(projet)
+                        return projectId ? (
+                          <Link
+                            key={idx}
+                            to={`/project/${projectId}`}
+                            className="projet-tag projet-tag-link"
+                          >
+                            {projet}
+                          </Link>
+                        ) : (
+                          <span key={idx} className="projet-tag">{projet}</span>
+                        )
+                      })}
                     </div>
                   </>
                 )}

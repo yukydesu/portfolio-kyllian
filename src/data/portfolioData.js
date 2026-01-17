@@ -129,7 +129,7 @@ export const portfolioData = {
       title: "Pas Cman - Jeu Pacman client-serveur",
       description: "Jeu Pacman multijoueur développé en C avec architecture client-serveur, mémoire partagée et sockets. Projet réalisé dans le cadre du cours de Langage C et Appels Système.",
       tags: ["C", "Sockets", "IPC", "Appels système"],
-      github: "https://github.com/yukydesu/PasCman",
+      github: "https://github.com/arthurdemurger/pas_cman_vinci",
       demo: null,
       image: null,
 
@@ -147,7 +147,7 @@ export const portfolioData = {
         "Architecture client-serveur robuste documentée (diagrammes d'architecture et de séquence)",
         "Gestion efficace de la communication par sockets et pipes"
       ],
-      technologies: ["C", "Sockets TCP/IP", "Mémoire partagée", "Sémaphores", "Fork/Exec", "Appels système POSIX", "IPC (Inter-Process Communication)"],
+      technologies: ["C", "Sockets TCP/IP", "Mémoire partagée", "Sémaphores", "Fork/Exec", "IPC"],
       skillsWorked: [
         {
           category: "Programmation système",
@@ -293,7 +293,7 @@ export const portfolioData = {
     {
       id: 3,
       title: "TerraBio - Plateforme de vente de produits locaux",
-      description: "Application web full-stack de centralisation et vente de produits locaux pour une coopérative, avec gestion des producteurs, clients et réservations. Projet développé dans le cadre du cours Conception d'Applications en Entreprise.",
+      description: "Plateforme web de gestion complète pour une coopérative locale de producteurs. Système de vente en circuit court avec workflow d'approbation des lots, gestion des réservations, et outils statistiques pour les gestionnaires.",
       tags: ["React", "TypeScript", "Spring Boot", "PostgreSQL", "Docker", "Azure"],
       github: "https://gitlab.com/e-vinci/cae-projects/2025-cae-projects/cae-group-07",
       demo: "https://terrabio-gxd4fhhnezexdzd4.centralus-01.azurewebsites.net",
@@ -301,18 +301,18 @@ export const portfolioData = {
 
       type: "Projet académique - CAE",
       duration: "12 semaines (Septembre - Décembre 2024)",
-      team: "Équipe de 5 étudiants (Group 07)",
-      context: "Projet réalisé en 3ème année Erasmus à l'IUT de Montpellier dans le cadre du cours Conception d'Applications en Entreprise (S5). Objectif : développer une plateforme web complète permettant à une coopérative de centraliser la vente de produits locaux avec gestion multi-utilisateurs (clients, producteurs, gestionnaires).",
-      constraints: "Architecture microservices obligatoire, déploiement cloud sur Azure, pipeline CI/CD automatisé, respect des bonnes pratiques DevOps, qualité de code (ESLint, tests), documentation technique complète.",
-      methodology: "Méthodologie Agile avec sprints de 2 semaines. Architecture microservices avec Docker et Docker Compose. Pipeline CI/CD GitLab avec tests automatisés, build d'images Docker et déploiement automatique sur Azure Web App. Utilisation de Git (feature branches, merge requests, code reviews).",
+      team: "Équipe de 5 étudiants (Groupe 07)",
+      context: "Projet réalisé en 3ème année de BUT Informatique dans le cadre du cours Conception d'Applications en Entreprise (S5). Mission : développer une plateforme digitale pour une coopérative locale regroupant producteurs, clients et gestionnaires. Finalité : présentation orale du site au client avec support slides démontrant les fonctionnalités développées.",
+      constraints: "Architecture microservices containerisée, déploiement cloud Azure avec haute disponibilité, pipeline CI/CD automatisé GitLab, authentification sécurisée multi-rôles (Client, Producteur, Bénévole, Gestionnaire), stockage cloud des images produits, tests automatisés et qualité de code.",
+      methodology: "Méthodologie Agile (sprints 2 semaines, daily stand-ups, retrospectives). Gestion GitLab complète : feature branches, merge requests avec code reviews, CI/CD pipeline automatisé (tests → build → deploy). Architecture 3-tier : Frontend React TypeScript, API REST Spring Boot, PostgreSQL. Collaboration en équipe de 5 avec répartition des rôles (backend, frontend, DevOps, documentation).",
       results: [
-        "Application full-stack déployée en production sur Azure",
-        "API REST complète avec authentification Spring Session + JWT",
-        "Interface utilisateur responsive avec Material-UI et TypeScript",
-        "Pipeline CI/CD automatisé (tests, build, déploiement)",
-        "Architecture microservices containerisée (Docker + Nginx)",
-        "Stockage d'images sur Azure Blob Storage",
-        "Documentation technique complète et cahier des charges"
+        "Plateforme déployée en production sur Azure",
+        "Système de gestion de lots avec workflow producteur → gestionnaire → client",
+        "Authentification JWT avec 4 rôles utilisateurs et permissions granulaires",
+        "Dashboard statistiques temps réel (ventes, stocks, réservations, revenus)",
+        "Pipeline CI/CD GitLab automatisé (tests, build Docker, deploy Azure)",
+        "Architecture microservices : API + Frontend + DB + Nginx reverse proxy",
+        "Présentation client réussie avec démonstration live des fonctionnalités"
       ],
       technologies: [
         "React 18",
@@ -320,67 +320,70 @@ export const portfolioData = {
         "Material-UI (MUI)",
         "Spring Boot 3",
         "Java 21",
-        "PostgreSQL",
-        "Docker",
+        "Spring Security",
+        "PostgreSQL 16",
+        "Docker Compose",
         "Azure Web App",
+        "Azure Blob Storage",
         "GitLab CI/CD",
         "Nginx",
-        "Spring Data JPA",
+        "JPA/Hibernate",
         "Maven",
         "Vite"
       ],
       skillsWorked: [
         {
-          category: "Développement Full Stack",
+          category: "Développement Backend (Spring Boot)",
           details: [
-            "Conception et développement d'une API REST avec Spring Boot",
-            "Frontend moderne avec React 18 et TypeScript",
-            "Authentification sécurisée (Spring Session + JWT + Refresh Tokens)",
-            "Gestion de base de données PostgreSQL avec Spring Data JPA",
-            "Interface utilisateur avec Material-UI et design responsive",
-            "Communication API avec Axios et gestion des états"
+            "Développement API REST 30+ endpoints (Controllers, Services, Repositories)",
+            "Authentification JWT avec Spring Security et BCrypt",
+            "Gestion des sessions avec tokens access et refresh",
+            "Modélisation BDD relationnelle complexe (10+ entités, relations 1:N et N:M)",
+            "ORM avec Spring Data JPA et Hibernate",
+            "Validation des données et gestion des erreurs (custom validators)",
+            "Intégration Azure Blob Storage pour upload d'images"
           ]
         },
         {
-          category: "DevOps et Cloud",
+          category: "Développement Frontend (React + TypeScript)",
           details: [
-            "Containerisation complète avec Docker et Docker Compose",
-            "Pipeline CI/CD GitLab (test, build, deploy)",
-            "Déploiement automatisé sur Azure Web App",
-            "Configuration multi-environnements (dev/staging/prod)",
-            "Gestion des secrets et variables d'environnement Azure",
-            "Intégration Azure Blob Storage pour stockage de fichiers",
-            "Health checks et monitoring de l'application"
+            "Application React 18 avec TypeScript pour typage statique",
+            "Gestion d'état globale avec Context API (Auth, Cart, Products, Reservations)",
+            "Routing avec React Router et routes protégées par rôle",
+            "Interface Material-UI (MUI) responsive et accessible",
+            "Communication API avec Axios et gestion des erreurs",
+            "Formulaires complexes avec validation côté client"
           ]
         },
         {
-          category: "Architecture et conception",
+          category: "DevOps et Intégration Continue",
           details: [
-            "Architecture microservices (API, Frontend, DB, Reverse Proxy)",
-            "Modélisation de base de données relationnelle",
-            "Conception d'API RESTful avec endpoints sécurisés",
-            "Séparation des responsabilités (3-tier architecture)",
-            "Documentation technique et diagrammes UML"
+            "Pipeline CI/CD GitLab automatisé : tests → build → deploy",
+            "Containerisation avec Docker (multi-stage builds)",
+            "Orchestration Docker Compose (4 services : API, Frontend, DB, Nginx)",
+            "Déploiement automatique sur Azure Web App",
+            "Configuration multi-environnements (.env dev/prod)",
+            "Health checks et monitoring des conteneurs"
           ]
         },
         {
-          category: "Qualité et bonnes pratiques",
+          category: "Architecture et Conception",
           details: [
-            "Tests unitaires (JUnit, Vitest) et E2E (Playwright)",
-            "Linting et formatting (ESLint, Prettier)",
-            "Git hooks avec Husky (pre-commit, commit-msg)",
-            "Conventional Commits et code reviews",
-            "Coverage de tests et quality gates"
+            "Architecture microservices avec reverse proxy Nginx",
+            "Modélisation domaine métier (workflows multi-étapes)",
+            "Conception API RESTful avec bonnes pratiques HTTP",
+            "RBAC : 4 rôles avec permissions granulaires",
+            "Diagrammes UML (cas d'utilisation, entités-relations, séquence)"
           ]
         },
         {
-          category: "Gestion de projet",
+          category: "Méthodologie Agile et Travail d'équipe",
           details: [
-            "Analyse de cahier des charges client",
-            "Méthodologie Agile avec sprints",
-            "Travail collaboratif en équipe de 5",
-            "Utilisation de GitLab (branches, MR, issues)",
-            "Documentation technique et livrables"
+            "Sprints de 2 semaines avec daily stand-ups et retrospectives",
+            "Utilisation GitLab : feature branches, merge requests, code reviews",
+            "Répartition des tâches en équipe de 5 (backend, frontend, DevOps)",
+            "Tests automatisés (JUnit backend, Vitest frontend, Playwright E2E)",
+            "Préparation et présentation orale au client avec slides"
           ]
         }
       ],
