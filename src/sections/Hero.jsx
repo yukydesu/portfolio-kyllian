@@ -1,4 +1,11 @@
 function Hero({ data }) {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section id="hero" className="hero">
       <div className="hero-content">
@@ -14,12 +21,12 @@ function Hero({ data }) {
           <p className="hero-bio">{data.bio}</p>
 
           <div className="hero-buttons">
-            <a href={`#projects`} className="btn btn-primary">
+            <button onClick={() => scrollToSection('projects')} className="btn btn-primary">
               Voir mes projets
-            </a>
-            <a href={`#contact`} className="btn btn-secondary">
+            </button>
+            <button onClick={() => scrollToSection('contact')} className="btn btn-secondary">
               Me contacter
-            </a>
+            </button>
           </div>
 
           <div className="hero-social">

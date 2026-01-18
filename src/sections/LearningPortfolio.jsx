@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom'
 
 // Mapping des noms de projets vers leurs IDs
 const projectNameToId = {
-  'SAE 5.01': 1,
-  'SAE 5.D.01': 1,
+  'SAE 5.01': 3,
+  'SAE 5.D.01': 3,
   'Pacman': 2,
-  'CAE Projet d\'entreprise': 3,
-  'TerraBio': 3
+  'CAE Projet d\'entreprise': 1,
+  'TerraBio': 1
 }
 
 function LearningPortfolio({ data }) {

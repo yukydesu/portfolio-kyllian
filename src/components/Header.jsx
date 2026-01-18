@@ -48,6 +48,9 @@ function Header({ toggleTheme, isDark }) {
           <button onClick={() => scrollToSection('skills')} className="nav-link">
             Compétences
           </button>
+          <button onClick={() => scrollToSection('ai-workflow')} className="nav-link">
+            IA & Workflow
+          </button>
           <button onClick={() => scrollToSection('learning-portfolio')} className="nav-link">
             Bilan BUT 3
           </button>

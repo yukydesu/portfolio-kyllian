@@ -9,7 +9,9 @@ import Projects from './sections/Projects'
 import Skills from './sections/Skills'
 import LearningPortfolio from './sections/LearningPortfolio'
 import Contact from './sections/Contact'
+import AIWorkflow from './sections/AIWorkflow'
 import ProjectDetail from './pages/ProjectDetail'
+import AIWorkflowPage from './pages/AIWorkflowPage'
 import { portfolioData } from './data/portfolioData'
 import './App.css'
 
@@ -22,6 +24,7 @@ function HomePage({ portfolioData, isDark, toggleTheme }) {
         <About data={portfolioData} />
         <Projects data={portfolioData} />
         <Skills data={portfolioData} />
+        <AIWorkflow data={portfolioData} />
         <LearningPortfolio data={portfolioData} />
         <Contact data={portfolioData} />
       </main>
@@ -53,6 +56,18 @@ function App() {
                 <Header toggleTheme={toggleTheme} isDark={isDark} />
                 <main>
                   <ProjectDetail />
+                </main>
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/ai-workflow"
+            element={
+              <>
+                <Header toggleTheme={toggleTheme} isDark={isDark} />
+                <main>
+                  <AIWorkflowPage />
                 </main>
                 <Footer />
               </>

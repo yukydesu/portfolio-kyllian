@@ -31,7 +31,7 @@ function About({ data }) {
 
         {/* Projets professionnels */}
         <div className="about-career">
-          <h3>Projets professionnels après le BUT</h3>
+          <h3>Projets professionnels après le cursus</h3>
           <div className="career-goals">
             {data.about.careerGoals && data.about.careerGoals.map((goal, index) => (
               <div key={index} className="career-goal-item">

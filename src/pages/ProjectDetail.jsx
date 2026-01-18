@@ -75,7 +75,7 @@ function ProjectDetail() {
   ] : []
 
   // Configuration spécifique pour le projet TerraBio
-  const isTerraBio = project.id === 3
+  const isTerraBio = project.id === 1
   const terraBioScreenshots = isTerraBio ? [
     {
       title: "Interface Client",
